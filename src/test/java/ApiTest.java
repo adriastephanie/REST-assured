@@ -1,15 +1,18 @@
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import constants.Constants;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
 public class ApiTest {
+    Constants constants;
 
-    @BeforeAll
-    public static void setup() {
-        RestAssured.baseURI = "https://dog.ceo/api"; // URL de exemplo
+    @BeforeEach
+    void setUp() {
+        constants = new Constants(); //
+        RestAssured.baseURI = constants.baseurl; // Define a base URL
     }
 
     @Test
