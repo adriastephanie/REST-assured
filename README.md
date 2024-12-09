@@ -114,5 +114,7 @@ utils/: funcionalidades auxiliares para o seu projeto de testes
 
 resorces/feature:  Contêm os cenários de teste escritos na linguagem Gherkin, que é uma linguagem legível por humanos e estruturada para descrever comportamentos esperados de um sistema, são os arquivos  .feature devem ser executadas em Java
 
+## Planejamento de teste
 
-
+segue link do planejamento de teste:
+https://docs.google.com/document/d/1nPBpdSYWd6rewTH5XaRbO7WHdLYRlZbqFgjVNFizu8Y/edit?usp=sharing
