@@ -77,4 +77,15 @@ Documentação: https://dog.ceo/dog-api/documentation
 
 ## Executando os testes
 
+ATENÇÃO:
+Existe duas branchs, uma com cucumber e outra sem, foi feita duas estruturas.
+
+### Executando os testes sem cucumber 
+
+```sh
+mvn test 
+```
+
+O CI está rodando e está guardando os relatórios do Allure, basta escolher qual vc quer ver lá mesmo no Actions.
+
 
