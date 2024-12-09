@@ -20,14 +20,14 @@ Funcionalidade: Listar todas as raças
     Então a resposta deve ter o status code 200
     E o corpo da resposta deve estar no formato JSON
 
-  # CT03 - Recurso Não Encontrado (404)
-  Cenário: Solicitar um recurso que não existe
-    Quando eu faço uma requisição GET para o endpoint "/breeds/list/1"
+  # CT03 - Recurso Não Encontrado (404) unido com o CT04 - Formato de resposta inválido (404)
+  Esquema do Cenário: Solicitar um recurso que não existe
+    Quando eu faço uma requisição GET para o endpoint "/breeds/list/<breed>"
     Então a resposta deve ter o status code 404
-
-  # CT04 - Formato de resposta inválido (404)
-  Cenário: Enviar parâmetros inválidos ou ausentes na URL de solicitação
-    Quando eu faço uma requisição GET para o endpoint "/breeds/list/xsz"
-    Então a resposta deve ter o status code 404
+    Exemplos:
+      | beagle          |
+      | 1111111         |
+      | xyzxyz          |
+      | abcd1234        |
 
 

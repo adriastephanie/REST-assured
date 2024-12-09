@@ -19,17 +19,34 @@ Funcionalidade: Listar imagens de uma raça específica
     E a resposta deve estar no formato JSON
 
   # CT03 - Recurso Não Encontrado (404)
-  Cenário: Solicitar um recurso que não existe
-    Quando eu faço uma requisição GET para o endpoint "breed/tetetes/images"
+  Esquema do Cenário: Solicitar um recurso que não existe
+    Dado que a API Image está acessível
+    Quando eu faço uma requisição GET para o endpoint "breed/<breed>/images"
     Então a resposta deve ter o status code 404
+    Exemplos:
+      | breed           |
+      | tetetes         |
+      | xyzxyz          |
+      | abcd1234        |
 
-    # CT04 - Validar resposta para um breeds com caracter especial (404)
-  Cenário: Solicitar um recurso com caracter especial
-    Quando eu faço uma requisição GET para o endpoint "breed/abrador-retriever/images"
+  # CT04 - Validar resposta para um breed com caractere especial (404)
+  Esquema do Cenário: Solicitar um recurso com caracter especial
+    Dado que a API Image está acessível
+    Quando eu faço uma requisição GET para o endpoint "breed/<breed>/images"
     Então a resposta deve ter o status code 404
+    Exemplos:
+      | breed                |
+      | abla-dor-retriever   |
+      | dog@123              |
+      | retriever!special    |
 
-    # CT05 - Validar resposta para um breeds com caracter especial (404)
-  Cenário: Solicitar um recurso com valor numerico
-    Quando eu faço uma requisição GET para o endpoint "breed/123/images"
+  # CT05 - Validar resposta para um breed com valor numérico (404)
+  Esquema do Cenário: Solicitar um recurso com valor numérico
+    Dado que a API Image está acessível
+    Quando eu faço uma requisição GET para o endpoint "breed/<breed>/images"
     Então a resposta deve ter o status code 404
-
+    Exemplos:
+      | breed |
+      | 123   |
+      | 4567  |
+      | 8910  |
