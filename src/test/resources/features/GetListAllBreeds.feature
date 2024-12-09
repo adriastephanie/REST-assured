@@ -25,7 +25,9 @@ Funcionalidade: Listar todas as raças
     Quando eu faço uma requisição GET para o endpoint "/breeds/list/1"
     Então a resposta deve ter o status code 404
 
-  # CT04 - Formato de resposta inválido (422)
+  # CT04 - Formato de resposta inválido (404)
   Cenário: Enviar parâmetros inválidos ou ausentes na URL de solicitação
     Quando eu faço uma requisição GET para o endpoint "/breeds/list/xsz"
     Então a resposta deve ter o status code 404
+
+
