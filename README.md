@@ -1,12 +1,25 @@
-# Automação de API REST
+# Automação de API REST Com e Sem Cucumber ()
 
 Este documento é a criação de uma automação de API, que utiliza RestAssured e JUnit como framework de testes de API.
+
 
 - [Java](https://www.oracle.com/br/java/technologies/downloads/)
 - [Maven](https://maven.apache.org/)
 - [JUnit5](https://junit.org/junit5/)
 - [Rest-assured](https://rest-assured.io/)
 - [Allure](https://allurereport.org/)
+- [Cucumber](https://cucumber.io/)
+
+## Atenção
+ O projeto tem 2 estruturas:
+- branch master: estrutura SEM CUCUMBER
+- branch refatoracao/teste: estrutura com CUCUMBER
+
+A branch master não contém todos os testes implementados, ela foi só para demonstrar/ter uma amostra como seria um repo sem cucumber.
+A implementação e todo o projeto completo está completo na branch refatoracao/teste.
+
+
+FOI IMPLEMENTADO CI NO PROJETO COM ARMAZENAMENTO DE REPORTS NAS DUAS BRANCHS
 
 ## Configuração local
 
@@ -77,7 +90,8 @@ Documentação: https://dog.ceo/dog-api/documentation
 
 ## Executando os testes
 
-rodar os teste
+Foi feita 2 estruturas para o projeto: uma sem cucumber e outra com 
+rodar os teste 
 ```sh
 mvn test 
 ```
@@ -87,3 +101,18 @@ mvn clean test
 ```
 
 cucumber está ficando no target/cucumber.html
+
+## Estrutura das paginas branch refatoracao/teste
+
+constants/: deve armazenar valores constantes ou configurações fixas
+
+runners/: Contém a classe que executa os testes do Cucumber.
+
+steps/: Contém as implementações das Step Definitions do Cucumber, onde você define como as etapas no arquivo .feature devem ser executadas em Java.
+
+utils/: funcionalidades auxiliares para o seu projeto de testes
+
+resorces/feature:  Contêm os cenários de teste escritos na linguagem Gherkin, que é uma linguagem legível por humanos e estruturada para descrever comportamentos esperados de um sistema, são os arquivos  .feature devem ser executadas em Java
+
+
+
