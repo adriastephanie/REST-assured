@@ -19,14 +19,24 @@ Funcionalidade: Buscar imagem de uma raça aleatória
     E devo ter como resposta o formato JSON
 
     # CT03 - Validar recurso que não existe
-  Cenário: Solicitar um recurso que não existe
+  Esquema do Cenário: Solicitar um recurso que não existe
     Dado que a API Image Random está acessível
-    Quando eu realizo uma busca no GET para o endpoint "breeds/image/pitbull"
+    Quando eu realizo uma busca no GET para o endpoint "breeds/image/<breed>"
     Então eu devo receber status code 404
+    Exemplos:
+      | beagle          |
+      | 1111111         |
+      | xyzxyz          |
+      | abcd1234        |
 
       # CT04 - Validar recurso que não existe com caracter especial
-  Cenário: Validar recurso com caracter especial
+  Esquema do Cenário: Validar recurso com caracter especial
     Dado que a API Image Random está acessível
-    Quando eu realizo uma busca no GET para o endpoint "breeds/image/labrador-retriever"
+    Quando eu realizo uma busca no GET para o endpoint "breeds/image/<breed>"
     Então eu devo receber status code 404
+    Exemplos:
+      | labrador-retriever          |
+      | golden-retriever            |
+      | Shih Tzu                    |
+      | shih tzu                    |
 
