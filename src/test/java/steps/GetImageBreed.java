@@ -12,6 +12,7 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 public class GetImageBreed extends TestBase {
     Constants constants = new Constants();  // Obtém as constantes (como a URL base)
     private Response response;

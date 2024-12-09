@@ -31,15 +31,14 @@ jobs:
       - name: Build
         run: mvn clean compile
 
-      - name: Tests
+      - name: Tests Cucumber
         run: mvn test
         continue-on-error: true
-
-      - name: Upload Reports
+      - name: Upload Cucumber HTML Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Allure Reports
-          path: "**/allure-results/"
+          name: Cucumber Report
+          path: target/cucumber.html
           retention-days: 90
           if-no-files-found: warn
