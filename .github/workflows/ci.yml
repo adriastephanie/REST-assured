@@ -10,9 +10,9 @@ name: REST-Assured Api CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "refatoracao/teste" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "master", "refatoracao/teste" ]
 
 jobs:
   tests:
