@@ -77,4 +77,13 @@ Documentação: https://dog.ceo/dog-api/documentation
 
 ## Executando os testes
 
+rodar os teste
+```sh
+mvn test 
+```
+limpar cache de teste
+```sh
+mvn clean test 
+```
 
+cucumber está ficando no target/cucumber.html
