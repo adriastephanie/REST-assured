@@ -35,11 +35,12 @@ jobs:
         run: mvn test
         continue-on-error: true
 
-      - name: Upload Reports
-        if: always()
-        uses: actions/upload-artifact@v4
+      - name: Upload Cucumber HTML Report
+        uses: actions/upload-artifact@v2
         with:
-          name: Allure Reports
-          path: "**/allure-results/"
-          retention-days: 90
-          if-no-files-found: warn
+          name: cucumber-report
+          path: target/cucumber-reports/*.html
+      - name: Display Test Results
+        run: |
+          echo "report:"
+          cat target/cucumber-reports/*.html
